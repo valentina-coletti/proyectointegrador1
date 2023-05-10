@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> TRÄCTOR </title>
+<link rel="stylesheet" href="estilos.css">
+<link src="javascript.js">
+
+</head>
+
+  <body>
+
+    <header>      
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">INICIO</a>
+        <a href="#">CARRO DE COMPRAS</a>
+        <a href="#">CARTA</a>
+        <a href="#">CERVEZAS</a>
+        <a href="#">CONTACTO/RESERVAS</a>
+        <a href="#">UBICACIÓN</a>
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>  
+      
+      </div>
+
+
+
+    </header>
+    
+
+        <div class="encabezado-img">
+            <h1> TRÄCTOR </h1>
+            <p>CERVEZA ARTESANAL</p>
+        </div>
+
+       
+        
+
+    <div class="cajacontenedora">
+        <div class="tipocerveza">
+          <img src="Imagenes/cerveza logo tractor.jpg">
+        </div>
+
+        <div class="menu">
+          <img src="Imagenes/hamburguesa y cerveza.png">
+        </div>
+
+        <div class="reservas">
+          <img src="Imagenes/Captura de pantalla (87).png">
+        </div>
+
+
+    </div>
+        <div class="cajacontenedora2">
+            <p>Parada TRÄCTOR es un lugar para compartir una cerveza con amigos con el río de testigo</p>
+
+              <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  
+                  <img src="Imagenes/paradatractor1.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="Imagenes/paradatractor2.png" style="width:100%">
+                  
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="Imagenes/paradatractor3.png" style="width:100%">
+                
+                </div>
+
+                <div class="mySlides fade">
+                  
+                  <img src="Imagenes/paradatractor4.png" style="width:100%">
+                
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+          </div>
+                <br>
+              
+       </div>
+
+        
+    <div class="cajacontenedora3">
+        <h1>¡Vení a visitarnos!</h1>
+        <a href="https://goo.gl/maps/GmgeanN9FLTj2jVE7">Ubicación Bar </a>
+        <a href="https://goo.gl/maps/vi6Ft3cUV2RCJFeLA">Ubicación Parada TRACTOR</a>
+    </div>
+
+
+
+  
+    
+
+      <footer> 
+        <div class="redes">
+          
+          <a href=" https://wa.me/3442539608"> <img src="Imagenes/whatsapp (1).svg" alt="logo whatsapp"> </a>
+         
+          <a href="https://www.facebook.com/cervezatractor"> <img src="Imagenes/facebook (1).svg" alt="logo facebook"> </a>
+          
+           <a href="https://www.instagram.com/cervezatractor/?hl=es"><img src="Imagenes/instagram (1).svg" alt="logo instagram"> </a>
+
+        </div>
+      </footer>
+
+
+
+
+
+    <script>    
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+
+    } 
+
+
+
+    
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+    
+
+
+
+  </body>
+</html>
